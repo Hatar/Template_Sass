@@ -1,0 +1,288 @@
+.width_float, header .logo, header .links-home {
+  width: 50%;
+  float: left; }
+
+.box-home, .home-page .box-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.h1, .home-page .box-home h1 {
+  font-size: 2rem;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  position: relative; }
+  .h1:after, .home-page .box-home h1:after {
+    position: absolute;
+    content: "";
+    width: 62px;
+    height: 1px;
+    border-bottom: 1px solid #e85e3f;
+    left: 46%;
+    top: 110%; }
+
+.h2, .about h2, .services h2, .sec-download h3, .sec-inTouch h2 {
+  font-size: 1.5rem;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  position: relative; }
+  .h2:after, .about h2:after, .services h2:after, .sec-download h3:after, .sec-inTouch h2:after {
+    position: absolute;
+    content: "";
+    width: 62px;
+    height: 1px;
+    border-bottom: 1px solid #FFF;
+    left: 46%;
+    top: 110%; }
+
+.p, .home-page .box-home p, .about p, .services .content-ser .box-services p, .sec-inTouch p {
+  line-height: 1.8;
+  color: #c1c7c6;
+  margin-bottom: 15px; }
+
+.button, .home-page .box-home button, .about button, .sec-download button {
+  background-color: #e85e3f;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #FFF;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .7s ease-in-out; }
+  .button:hover, .home-page .box-home button:hover, .about button:hover, .sec-download button:hover {
+    background-color: #FFF;
+    color: #e85e3f; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.container {
+  width: 1127px;
+  margin: 0 auto; }
+
+/* Start Header */
+header {
+  background-color: #212529;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  header .logo {
+    color: #c1c7c6;
+    padding: 15px 15px;
+    text-transform: uppercase; }
+  header .links-home {
+    display: flex;
+    list-style: none; }
+    header .links-home li {
+      padding: 20px 15px; }
+      header .links-home li a {
+        text-decoration: none;
+        color: #c1c7c6;
+        text-transform: uppercase;
+        font-weight: normal;
+        transition: all .7s ease-in-out; }
+        header .links-home li a:hover {
+          color: #e85e3f; }
+
+/* Start Home Page */
+.home-page {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  text-align: center; }
+
+/* Start About */
+.about {
+  padding: 50px 0;
+  overflow: hidden;
+  background-color: #e85e3f;
+  color: #FFF;
+  text-align: center; }
+  .about button {
+    background-color: #FFF;
+    color: #4a423f; }
+    .about button:hover {
+      background-color: #4a423f;
+      color: #FFF; }
+
+/* Start Services */
+.services {
+  overflow: hidden;
+  padding: 50px 0; }
+  .services h2 {
+    color: #e85e3f;
+    text-align: center;
+    margin-bottom: 40px; }
+    .services h2:after {
+      border-bottom: 1px solid #e85e3f; }
+  .services .content-ser {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    .services .content-ser .box-services {
+      grid-column-gap: 20px;
+      text-align: center; }
+      .services .content-ser .box-services i {
+        color: #e85e3f;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px; }
+      .services .content-ser .box-services h3 {
+        color: #4a423f;
+        font-size: 1.6rem;
+        margin: 10px 0;
+        letter-spacing: 1px;
+        font-weight: normal; }
+      .services .content-ser .box-services p {
+        line-height: 1.5; }
+
+/* Start Section Images */
+.sec-images {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0; }
+  .sec-images > div {
+    position: relative; }
+    .sec-images > div img {
+      width: 100%; }
+    .sec-images > div:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(232, 94, 63, 0.5);
+      transition: all .7s ease-in-out;
+      display: none;
+      cursor: pointer; }
+    .sec-images > div:hover:after {
+      display: block; }
+
+/* Start Download */
+.sec-download {
+  background-color: #212529;
+  color: #FFF;
+  text-align: center;
+  overflow: hidden;
+  padding: 50px 0; }
+  .sec-download button {
+    background-color: #FFF;
+    color: #212529;
+    margin-top: 30px; }
+    .sec-download button:hover {
+      background-color: #e85e3f;
+      color: #FFF; }
+
+/*Start In Touch */
+.sec-inTouch {
+  overflow: hidden;
+  padding: 50px 0;
+  text-align: center;
+  position: relative; }
+  .sec-inTouch h2 {
+    color: #4a423f; }
+    .sec-inTouch h2:after {
+      border-bottom: 1px solid #e85e3f; }
+  .sec-inTouch .box-inTouch {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .sec-inTouch .box-inTouch .in-touch {
+      margin-top: 30px;
+      align-items: center; }
+      .sec-inTouch .box-inTouch .in-touch i {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px; }
+      .sec-inTouch .box-inTouch .in-touch span {
+        display: block;
+        color: #4a423f; }
+      .sec-inTouch .box-inTouch .in-touch span.active {
+        color: #e85e3f; }
+
+@media (min-width: 992px) {
+  .h1, .home-page .box-home h1 {
+    font-size: 1.8rem; } }
+
+@media (max-width: 991px) {
+  .h1, .home-page .box-home h1 {
+    font-size: 1.7rem; }
+    .h1:after, .home-page .box-home h1:after {
+      left: 46%;
+      top: 110%; } }
+
+@media (max-width: 767px) {
+  .width_float, header .logo, header .links-home {
+    float: none;
+    width: 100%; }
+  header {
+    position: static;
+    padding-right: 100px;
+    padding-left: 100px; }
+    header .links-home {
+      display: block; }
+      header .links-home li {
+        margin-left: 90px; }
+  .services .h2:after, .services .about h2:after, .about .services h2:after, .services h2:after, .services .sec-download h3:after, .sec-download .services h3:after, .services .sec-inTouch h2:after, .sec-inTouch .services h2:after {
+    left: 45%; }
+  .services .content-ser {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .services .content-ser .box-services {
+      margin-bottom: 20px; }
+  .sec-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 567px) {
+  .width_float, header .logo, header .links-home {
+    float: none;
+    width: 100%; }
+  header {
+    position: static;
+    padding-right: 100px;
+    padding-left: 100px; }
+    header .links-home {
+      display: block; }
+      header .links-home li {
+        margin-left: 90px; }
+  .h1, .home-page .box-home h1 {
+    font-size: 20px; }
+    .h1:after, .home-page .box-home h1:after {
+      left: 38%; }
+  p {
+    font-size: 17px; }
+  .about p {
+    margin: 0 10px;
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .services .h2:after, .services .about h2:after, .about .services h2:after, .services h2:after, .services .sec-download h3:after, .sec-download .services h3:after, .services .sec-inTouch h2:after, .sec-inTouch .services h2:after {
+    left: 45%; }
+  .services .content-ser {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .sec-images {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .sec-inTouch p {
+    margin: 0 10px;
+    font-size: 17px;
+    margin-bottom: 20px; } }

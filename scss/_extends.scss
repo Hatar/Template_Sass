@@ -1,0 +1,67 @@
+// Extends
+.width_float{
+    width: 50%;
+    float: left;
+}
+.box-home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.h1{
+    font-size:2rem;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    position: relative;
+    &:after{
+        position: absolute;
+        content: "";
+        width: 62px;
+        height: 1px;
+        border-bottom: 1px solid $main-color;
+        left: 46%;
+        top: 110%;
+    }
+}
+.h2{
+    font-size:1.5rem;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    position: relative;
+    &:after{
+        position: absolute;
+        content: "";
+        width: 62px;
+        height: 1px;
+        border-bottom: 1px solid #FFF;
+        left: 46%;
+        top: 110%;
+    }
+}
+.p{
+    line-height: 1.8;
+    color: $color-header;
+    margin-bottom: 15px;
+}
+.button{
+    background-color: $main-color;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 0;
+    border-radius:20px;
+    cursor: pointer;
+    @include Transition;
+    &:hover{
+        background-color: #FFF;
+        color: $main-color
+    }
+}

@@ -1,0 +1,221 @@
+@import "variable";
+@import "mixin";
+@import "extends";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    width: 1127px;
+    margin: 0 auto
+}
+/* Start Header */
+header{
+    background-color: $background-down;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    .logo{
+        @extend .width_float;
+        color: $color-header;
+        padding:15px 15px;
+        text-transform: uppercase;
+    }
+    .links-home{
+        @extend .width_float;
+        display: flex;
+        list-style: none;
+        li{
+            padding:20px 15px;
+            a{
+                text-decoration: none;
+                color: $color-header;
+                text-transform: uppercase;
+                font-weight: normal;
+                @include Transition;
+                &:hover{
+                    color: $main-color
+                }
+            }
+        }
+    }
+}
+/* Start Home Page */
+.home-page{
+    background-image: $background-img;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    .box-home{
+        @extend .box-home;
+        h1{
+           @extend .h1
+        }
+        p{
+          @extend .p
+        }
+        button{
+           @extend .button
+        }
+    }
+}
+/* Start About */
+.about{
+    padding: 50px 0;
+    overflow: hidden;
+    background-color: $main-color;
+    color: #FFF;
+    text-align: center;
+    h2{
+        @extend .h2;
+     }
+     p{
+       @extend .p
+     }
+     button{
+        @extend .button;
+        background-color: #FFF;
+        color: $second-color;
+        &:hover{
+            background-color: $second-color;
+            color: #FFF
+        }
+    }
+}
+/* Start Services */
+.services{
+    overflow: hidden;
+    padding: 50px 0;
+    h2{
+       @extend .h2;
+       color: $main-color;
+       text-align: center;
+       margin-bottom: 40px;
+       &:after{
+           border-bottom: 1px solid $main-color;
+       }
+    }
+    .content-ser{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        .box-services{
+            grid-column-gap: 20px;
+            text-align: center;
+            i{
+                color: $main-color;
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            h3{
+                color: $second-color;
+                font-size:1.6rem;
+                margin: 10px 0;
+                letter-spacing: 1px;
+                font-weight: normal;
+            }
+            p{
+                @extend .p;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+/* Start Section Images */
+.sec-images{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 0;
+    > div {
+        position: relative;
+        img{
+            width:100%;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba( $main-color, .5);
+            @include Transition;
+            display: none;
+            cursor: pointer;
+        }
+        &:hover{
+            &:after{
+                display: block
+            }
+        }
+    }
+}
+/* Start Download */
+.sec-download{
+    background-color:$background-down;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    padding: 50px 0;
+    h3{
+        @extend .h2;
+    }
+    button{
+        @extend .button;
+        background-color: #FFF;
+        color: $background-down;
+        margin-top: 30px;
+        &:hover{
+            background-color:$main-color;
+            color: #FFF
+        }
+    }
+}
+/*Start In Touch */
+.sec-inTouch{
+    overflow: hidden;
+    padding: 50px 0;
+    text-align:center;
+    position: relative;
+    h2{
+        @extend .h2;
+        color: $second-color;
+        &:after{
+            border-bottom: 1px solid $main-color;
+        }
+    }
+    p{
+        @extend .p
+    }
+    .box-inTouch{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        .in-touch{
+            margin-top: 30px;
+            align-items: center;
+            i{
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            span{
+                display: block;
+                color: $second-color;
+            }
+            span.active{
+                color:$main-color
+            }
+        }
+    }
+}
+@import "media_query";

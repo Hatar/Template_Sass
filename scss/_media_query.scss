@@ -1,0 +1,112 @@
+@include Lg{
+    .h1{
+        font-size: 1.8rem;
+    }
+}
+@include Md{
+    .h1{
+        font-size: 1.7rem;
+        &:after{
+            left: 46%;
+            top: 110%;
+        }
+    }
+}
+@include Sm{
+    //Header
+    .width_float{
+        float: none;
+        width: 100%;
+    }
+    header{
+        position: static;
+        padding-right: 100px;
+        padding-left: 100px;
+        .links-home{
+            display: block;
+            li{
+                margin-left: 90px;
+            }
+        }
+    }
+    //Services
+    .services{
+        .h2{
+            &:after{
+                left: 45%;
+            }
+        }
+        .content-ser{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            .box-services{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    //Section Images
+    .sec-images{
+        display: grid;
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+@include Xs{
+    //Header
+    .width_float{
+        float: none;
+        width: 100%;
+    }
+    header{
+        position: static;
+        padding-right: 100px;
+        padding-left: 100px;
+        .links-home{
+            display: block;
+            li{
+                margin-left: 90px;
+            }
+        }
+    }
+    .h1{
+        font-size: 20px;
+        &:after{
+            left: 38%;
+        }
+    }
+    p{
+        font-size: 17px;
+    }
+    //About
+    .about{
+        p{
+            margin: 0 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+    //Services
+    .services{
+        .h2{
+            &:after{
+                left: 45%;
+            }
+        }
+        .content-ser{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    //Section Images
+    .sec-images{
+        display: grid;
+        grid-template-columns: 1fr
+    }
+    //Section In Touch
+    .sec-inTouch{
+        p{
+            margin: 0 10px;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+    }
+}

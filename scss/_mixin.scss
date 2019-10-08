@@ -1,0 +1,24 @@
+//Mixins
+@mixin Transition {
+    transition: all .7s ease-in-out
+}
+@mixin Lg {
+    @media (min-width:992px) {
+        @content;
+    }
+}
+@mixin Md {
+    @media (max-width:991px) {
+        @content;
+    }
+}
+@mixin Sm {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+@mixin Xs {
+    @media (max-width:567px) {
+        @content;
+    }
+}
